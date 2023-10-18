@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: documenso-app
+    name: rubrix
     env: node
     plan: free
     buildCommand: npm i && npm run build:web
@@ -18,7 +18,7 @@ services:
       # Auth
       - key: NEXTAUTH_URL
         fromService:
-          name: documenso-app
+          name: rubrix
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXTAUTH_SECRET
@@ -38,7 +38,7 @@ services:
       # URLs
       - key: NEXT_PUBLIC_WEBAPP_URL
         fromService:
-          name: documenso-app
+          name: rubrix
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PUBLIC_MARKETING_URL
@@ -48,55 +48,55 @@ services:
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
         value: 'smtp-auth'
       - key: NEXT_PRIVATE_SMTP_HOST
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_SMTP_PORT
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_SMTP_USERNAME
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_SMTP_PASSWORD
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
-        sync: false
+        sync: true
 
       # Stripe
       - key: NEXT_PRIVATE_STRIPE_API_KEY
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_STRIPE_WEBHOOK_SECRET
-        sync: false
+        sync: true
       - key: NEXT_PUBLIC_STRIPE_COMMUNITY_PLAN_MONTHLY_PRICE_ID
-        sync: false
+        sync: true
       - key: NEXT_PUBLIC_STRIPE_COMMUNITY_PLAN_YEARLY_PRICE_ID
-        sync: false
+        sync: true
 
       # Features
       - key: NEXT_PUBLIC_POSTHOG_KEY
-        sync: false
+        sync: true
       - key: NEXT_PUBLIC_POSTHOG_HOST
         value: 'https://eu.posthog.com'
       - key: NEXT_PUBLIC_FEATURE_BILLING_ENABLED
-        sync: false
+        sync: true
 
       # Redis (Only required for marketing site, but added for completeness)
       - key: NEXT_PRIVATE_REDIS_URL
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_REDIS_TOKEN
-        sync: false
+        sync: true
 
       # Storage
       - key: NEXT_PUBLIC_UPLOAD_TRANSPORT
         value: 'database'
       - key: NEXT_PRIVATE_UPLOAD_ENDPOINT
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_UPLOAD_REGION
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_UPLOAD_BUCKET
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_UPLOAD_ACCESS_KEY_ID
-        sync: false
+        sync: true
       - key: NEXT_PRIVATE_UPLOAD_SECRET_ACCESS_KEY
-        sync: false
+        sync: true
 
 databases:
   - name: documenso-db
