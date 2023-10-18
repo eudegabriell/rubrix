@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: documenso-app
+    name: rubrix
     env: node
     plan: free
     buildCommand: npm i && npm run build:web
@@ -18,7 +18,7 @@ services:
       # Auth
       - key: NEXTAUTH_URL
         fromService:
-          name: documenso-app
+          name: rubrix
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXTAUTH_SECRET
@@ -38,7 +38,7 @@ services:
       # URLs
       - key: NEXT_PUBLIC_WEBAPP_URL
         fromService:
-          name: documenso-app
+          name: rubrix
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PUBLIC_MARKETING_URL
