@@ -153,7 +153,7 @@ export const SignInForm = ({ className }: SignInFormProps) => {
         disabled={isSubmitting}
         className="dark:bg-documenso dark:hover:opacity-90"
       >
-        {isSubmitting ? 'Signing in...' : 'Sign In'}
+        {isSubmitting ? 'Entrando...' : 'Entrar'}
       </Button>
 
       <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
