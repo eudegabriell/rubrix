@@ -7,6 +7,10 @@ export default function SignInPage() {
     <div>
       <h1 className="text-4xl font-semibold">Faça login em sua conta</h1>
 
+      <p className="text-muted-foreground/60 mt-2 text-sm">
+        Bem vindo de volta!
+      </p>
+
       <SignInForm className="mt-4" />
 
       <p className="text-muted-foreground mt-6 text-center text-sm">
