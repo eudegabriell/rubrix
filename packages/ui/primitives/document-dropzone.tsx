@@ -153,10 +153,10 @@ export const DocumentDropzone = ({
           <input {...getInputProps()} />
 
           <p className="group-hover:text-foreground text-muted-foreground mt-8 font-medium">
-            Add a document
+            Adicionar documento
           </p>
 
-          <p className="text-muted-foreground/80 mt-1 text-sm ">Drag & drop your document here.</p>
+          <p className="text-muted-foreground/80 mt-1 text-sm ">Arraste ou selecione seu documento aqui.</p>
         </CardContent>
       </Card>
     </motion.div>
