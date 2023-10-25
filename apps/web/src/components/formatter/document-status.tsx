@@ -15,17 +15,17 @@ type FriendlyStatus = {
 
 const FRIENDLY_STATUS_MAP: Record<ExtendedDocumentStatus, FriendlyStatus> = {
   PENDING: {
-    label: 'Pending',
+    label: 'Pendente',
     icon: Clock,
     color: 'text-blue-600 dark:text-blue-300',
   },
   COMPLETED: {
-    label: 'Completed',
+    label: 'Concluído',
     icon: CheckCircle2,
     color: 'text-green-500 dark:text-green-300',
   },
   DRAFT: {
-    label: 'Draft',
+    label: 'Rascunho',
     icon: File,
     color: 'text-yellow-500 dark:text-yellow-200',
   },
@@ -35,7 +35,7 @@ const FRIENDLY_STATUS_MAP: Record<ExtendedDocumentStatus, FriendlyStatus> = {
     color: 'text-muted-foreground',
   },
   ALL: {
-    label: 'All',
+    label: 'Todos',
     color: 'text-muted-foreground',
   },
 };
