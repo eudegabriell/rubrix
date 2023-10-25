@@ -18,10 +18,10 @@ import { Label } from '@documenso/ui/primitives/label';
 import { useToast } from '@documenso/ui/primitives/use-toast';
 
 const ERROR_MESSAGES = {
-  [ErrorCode.CREDENTIALS_NOT_FOUND]: 'The email or password provided is incorrect',
-  [ErrorCode.INCORRECT_EMAIL_PASSWORD]: 'The email or password provided is incorrect',
+  [ErrorCode.CREDENTIALS_NOT_FOUND]: 'O e-mail ou senha fornecido está incorreto',
+  [ErrorCode.INCORRECT_EMAIL_PASSWORD]: 'O e-mail ou senha fornecido está incorreto',
   [ErrorCode.USER_MISSING_PASSWORD]:
-    'This account appears to be using a social login method, please sign in using that method',
+    'Esta conta parece estar usando um método de login social. Faça login usando esse método',
 };
 
 const LOGIN_REDIRECT_PATH = '/documents';
@@ -72,15 +72,15 @@ export const SignInForm = ({ className }: SignInFormProps) => {
       }
 
       if (!result?.url) {
-        throw new Error('An unknown error occurred');
+        throw new Error('Ocorreu um erro desconhecido');
       }
 
       window.location.href = result.url;
     } catch (err) {
       toast({
-        title: 'An unknown error occurred',
+        title: 'Ocorreu um erro desconhecido',
         description:
-          'We encountered an unknown error while attempting to sign you In. Please try again later.',
+          'Encontramos um erro desconhecido ao tentar fazer seu login. Por favor, tente novamente mais tarde.',
       });
     }
   };
@@ -90,9 +90,9 @@ export const SignInForm = ({ className }: SignInFormProps) => {
       await signIn('google', { callbackUrl: LOGIN_REDIRECT_PATH });
     } catch (err) {
       toast({
-        title: 'An unknown error occurred',
+        title: 'Ocorreu um erro desconhecido',
         description:
-          'We encountered an unknown error while attempting to sign you In. Please try again later.',
+          'Encontramos um erro desconhecido ao tentar fazer seu login. Por favor, tente novamente mais tarde.',
         variant: 'destructive',
       });
     }
@@ -115,7 +115,7 @@ export const SignInForm = ({ className }: SignInFormProps) => {
 
       <div>
         <Label htmlFor="password" className="text-muted-forground">
-          <span>Password</span>
+          <span>Senha</span>
         </Label>
 
         <div className="relative">
@@ -158,7 +158,7 @@ export const SignInForm = ({ className }: SignInFormProps) => {
 
       <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
         <div className="bg-border h-px flex-1" />
-        <span className="text-muted-foreground bg-transparent">Or continue with</span>
+        <span className="text-muted-foreground bg-transparent">OU CONTINUAR COM</span>
         <div className="bg-border h-px flex-1" />
       </div>
 
